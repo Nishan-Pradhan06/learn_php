@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #33ccff 0%, #33cc33 100%);
+        }
+
+        section {
+            height: 500px;
+            width: 650px;
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+
+        form {
+            padding: 40px;
+        }
+
+        #heading {
+            height: 50px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .field-container {
+            padding: 10px
+        }
+
+        .input_field {
+            background-color: #F1FAFF;
+            border: none;
+            border-radius: 5px;
+            height: 40px;
+            width: 160px;
+            padding: 0 8px;
+            margin: 10px;
+        }
+
+        .input-width {
+            width: 360px;
+        }
+
+        .label-field {
+            margin-right: 60px;
+        }
+
+        .label-width {
+            padding-right: 30px;
+        }
+
+        .sub-width {
+            padding-right: 20px;
+        }
+
+        .a-code {
+            width: 100px;
+        }
+
+        .num {
+            width: 200px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .label-below {
+            color: rgb(214, 202, 202);
+            font-size: 12px;
+        }
+
+        .firstname-label {
+            margin: 0 134px 0 154px;
+        }
+
+        .phone-label {
+            margin: 0 -78px 0 155px;
+        }
+
+        .validate {
+            padding: 10px;
+        }
+
+        .button {
+            height: 40px;
+            width: 100px;
+            border: none;
+            background-color: #33ccff;
+            border-radius: 6px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .button:hover {
+            cursor: pointer;
+            background-color: #23afdd;
+            transition: 100ms ease;
+        }
+    </style>
+    </head>
+
+    <body>
+        <section>
+            <div id="heading">
+                <h1>EVENT REGISTRATION FORM</h1>
+            </div>
+
+            <form action="submit.php" method="post">
+                <div class="main-container">
+                    <div class="field-container ">
+                        <label for="firstname"
+                            class="label-field label-width">Name</label>
+                        <input type="text" name="firstname" class="input_field">
+                        <input type="text" name="lastname" class="input_field">
+                        <div class="label-below">
+                            <label class="firstname-label">First Name</label>
+                            <label class="lastname-label">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <label for="address" class="label-field">Address</label>
+                        <input type="text" name="address" id="address"
+                            class="input_field input-width">
+                    </div>
+                    <div class="field-container">
+                        <label class="label-field label-width">Phone</label>
+                        <input type="number" name="areacode"
+                            class="input_field a-code">
+                        <input type="tel" name="contact"
+                            class="input_field label-width num"><br>
+                        <div class="label-below">
+                            <label class="phone-label">Area Code</label>
+                            <label class="phone-label">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <label class="label-field sub-width">Subject</label>
+                        <select name="subject" class="input_field input-width">
+                            <option value="Subject 1"><strong>Selection
+                                    Subjects</strong></option>
+                            <option value="Subject 2">System Design and
+                                Analysis</option>
+                            <option value="Subject 3">Web Technology</option>
+                            <option value="Subject 4">Statistics and
+                                Probability</option>
+                            <option value="Subject 5">DSA</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="submit" name="submit" class="button"
+                            value="Submit">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </body>
+
+</html>
